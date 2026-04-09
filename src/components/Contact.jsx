@@ -100,7 +100,7 @@ export default function Contact() {
               <p className="section-copy" style={{ maxWidth: 400, marginBottom: '2rem' }}>
                 I'm actively looking for internship opportunities in cybersecurity, networking, or sysadmin. If you think I'd be a good fit, reach out.
               </p>
-              <a href="/cv.pdf" download className="btn-primary" style={{ display: 'inline-flex' }}>
+              <a href={`${import.meta.env.BASE_URL}cv.pdf`} download className="btn-primary" style={{ display: 'inline-flex' }}>
                 Download CV
               </a>
             </Reveal>

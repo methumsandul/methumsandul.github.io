@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import Reveal from './Reveal'
 
+const base = import.meta.env.BASE_URL
+
 const projects = [
   {
     num: '01',
@@ -16,11 +18,11 @@ const projects = [
     tags: ['Cisco IOS', 'VLAN', 'Inter-VLAN routing', 'Switching'],
     gallery: [
       {
-        src: '/images/projects/project-01-1.jpg',
+        src: `${base}images/projects/project-01-1.jpg`,
         alt: 'Network topology view for the VLAN rollout project', 
       },
       {
-        src: '/images/projects/project-01-2.jpg',
+        src: `${base}images/projects/project-01-2.jpg`,
         alt: 'Configuration or validation view for the VLAN rollout project', 
       },
     ],
@@ -66,7 +68,7 @@ const projects = [
     tags: ['Groq AI', 'Desktop software', 'Live transcription', 'AI notes', 'Lecture Q&A', 'Slide upload'],
     gallery: [
       {
-        src: '/images/projects/ant-screenshot.png',
+        src: `${base}images/projects/ant-screenshot.png`,
         alt: 'ANT AI Note Taker interface showing live transcript, AI notes, and lecture chat panels',
         fit: 'contain',
         ratio: '16 / 10',

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 
 const words = ['Ethical Hacking', 'Network Security', 'Linux Administration', 'DevOps']
-const portraitSrc = '/profile-photo.jpg'
+const portraitSrc = `${import.meta.env.BASE_URL}profile-photo.jpg`
 
 function Typewriter() {
   const [idx, setIdx] = useState(0)
@@ -142,7 +142,7 @@ export default function Hero() {
             style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '1rem' }}
           >
             <a href="#contact" className="btn-primary">Get in touch</a>
-            <a href="/cv.pdf" download className="btn-ghost">Download CV</a>
+            <a href={`${import.meta.env.BASE_URL}cv.pdf`} download className="btn-ghost">Download CV</a>
             <a href="#projects" className="btn-ghost">View projects</a>
           </motion.div>
         </div>

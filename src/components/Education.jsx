@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import Reveal from './Reveal'
 
+const base = import.meta.env.BASE_URL
+
 const items = [
   {
     period: '2024 - 2028',
@@ -8,7 +10,7 @@ const items = [
     institution: 'NIBM',
     detail: 'Undergraduate pathway focused on secure systems, cyber concepts, and practical network defence thinking.',
     current: true,
-    logo: '/images/education/nibm-logo.png',
+    logo: `${base}images/education/nibm-logo.png`,
     fallback: 'NI',
   },
   {
@@ -17,7 +19,7 @@ const items = [
     institution: 'NIBM',
     detail: 'Applied networking track covering routing, switching, service deployment, and infrastructure fundamentals.',
     current: true,
-    logo: '/images/education/nibm-logo.png',
+    logo: `${base}images/education/nibm-logo.png`,
     fallback: 'NI',
   },
   {
@@ -26,7 +28,7 @@ const items = [
     institution: 'NIBM',
     detail: 'Built the base for hands-on networking practice and the labs that now support my project work.',
     current: false,
-    logo: '/images/education/nibm-logo.png',
+    logo: `${base}images/education/nibm-logo.png`,
     fallback: 'NI',
   },
   {
@@ -35,7 +37,7 @@ const items = [
     institution: "St. Sebastian's College, Moratuwa",
     detail: 'Academic foundation before moving into formal cybersecurity and network engineering studies.',
     current: false,
-    logo: '/images/education/st-sebastians-logo.png',
+    logo: `${base}images/education/st-sebastians-logo.png`,
     fallback: 'SS',
   },
 ]
