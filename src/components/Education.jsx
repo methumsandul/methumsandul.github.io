@@ -93,7 +93,7 @@ export default function Education() {
 
         <Reveal delay={0.05}>
           <p className="section-subtitle" style={{ maxWidth: 760, marginBottom: '3rem' }}>
-            I kept this section simple, but lifted the readability so the qualifications are easier to scan.
+             
           </p>
         </Reveal>
 

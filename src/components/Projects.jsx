@@ -176,7 +176,7 @@ export default function Projects() {
 
         <Reveal delay={0.05}>
           <p className="section-subtitle" style={{ maxWidth: 760, marginBottom: '3rem' }}>
-            This section highlights both infrastructure labs and software work, with screenshots where useful so the actual environment or interface is visible.
+           
           </p>
         </Reveal>
 
