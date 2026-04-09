@@ -3,8 +3,8 @@ import Reveal from './Reveal'
 const certGroups = [
   {
     provider: 'Red Hat',
-    heading: 'Linux administration certification path',
-    count: '2 certifications',
+    heading: 'Linux administration track',
+    count: '2 earned',
     items: [
       { name: 'RHCSA (RHEL 9.3)', status: 'Completed' },
       { name: 'RHCE (RHEL 9.3)', status: 'Completed' },
@@ -13,7 +13,7 @@ const certGroups = [
   {
     provider: 'Cisco',
     heading: 'Networking and cybersecurity track',
-    count: '5 certifications',
+    count: '5 earned',
     items: [
       { name: 'Introduction to Networking', status: 'Completed' },
       { name: 'Switching, Routing and Wireless', status: 'Completed' },
@@ -24,8 +24,8 @@ const certGroups = [
   },
   {
     provider: 'Academic and partner programs',
-    heading: 'Supplementary security and network engineering credentials',
-    count: '2 certifications',
+    heading: 'Additional technical credentials',
+    count: '2 earned',
     items: [
       { name: 'Certificate in Cybersecurity - NIBM', status: 'Completed' },
       { name: 'Network Engineering with Security - NextGen Campus', status: 'Completed' },
@@ -41,6 +41,12 @@ export default function Certifications() {
           <div className="h-rule">
             <span className="label">05 - Certifications</span>
           </div>
+        </Reveal>
+
+        <Reveal delay={0.05}>
+          <p className="section-subtitle" style={{ maxWidth: 760, marginBottom: '3rem' }}>
+            Certifications that validate practical knowledge across Linux, networking, and cybersecurity.
+          </p>
         </Reveal>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '1.5rem' }}>

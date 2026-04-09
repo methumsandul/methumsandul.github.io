@@ -53,27 +53,27 @@ const links = [
   {
     href: 'mailto:methumsandul2006@gmail.com?subject=Portfolio%20Inquiry',
     label: 'Email',
-    tag: 'Open your mail app',
+    tag: 'Fastest response',
     icon: MailIcon,
   },
   {
     href: 'https://www.linkedin.com/in/methum-sandul-1b7962215/',
     label: 'LinkedIn',
-    tag: 'View profile',
+    tag: 'Professional profile',
     icon: LinkIcon,
     external: true,
   },
   {
     href: 'https://github.com/methumsandul',
     label: 'GitHub',
-    tag: 'Explore work',
+    tag: 'Technical portfolio',
     icon: CodeIcon,
     external: true,
   },
   {
     href: 'https://wa.me/94707055121?text=Hi%20Methum%2C%20I%20saw%20your%20portfolio.',
     label: 'WhatsApp',
-    tag: 'Start a chat',
+    tag: 'Quick message',
     icon: ChatIcon,
     external: true,
   },
@@ -98,7 +98,7 @@ export default function Contact() {
             </Reveal>
             <Reveal delay={0.1}>
               <p className="section-copy" style={{ maxWidth: 400, marginBottom: '2rem' }}>
-                I'm actively looking for internship opportunities in cybersecurity, networking, or sysadmin. If you think I'd be a good fit, reach out.
+                Open to internship roles in cybersecurity, networking, and Linux administration. Reach out for my CV, project details, or interview availability.
               </p>
               <a href={`${import.meta.env.BASE_URL}cv.pdf`} download className="btn-primary" style={{ display: 'inline-flex' }}>
                 Download CV

@@ -1,10 +1,10 @@
 import Reveal from './Reveal'
 
 const stats = [
-  { n: '4+', l: 'Hands-on projects' },
-  { n: '9+', l: 'Certifications earned' },
-  { n: 'RHCSA', l: 'Linux admin milestone' },
-  { n: '2024', l: 'Started my security path' },
+  { n: '4+', l: 'Portfolio projects' },
+  { n: '9+', l: 'Industry certifications' },
+  { n: 'RHCSA', l: 'Red Hat Linux certified' },
+  { n: 'Open', l: 'Internship availability' },
 ]
 
 export default function About() {
@@ -21,20 +21,15 @@ export default function About() {
           <div>
             <Reveal>
               <h2 className="section-title" style={{ marginBottom: '2rem' }}>
-                Who I am.
+                Profile.
               </h2>
             </Reveal>
             <Reveal delay={0.1}>
               <p className="section-copy" style={{ marginBottom: '1.25rem' }}>
-                Ethical Hacking & Network Security undergraduate at NIBM, Sri Lanka.
-                I am driven by curiosity and by understanding how systems work so I can protect them well.
-              </p>
-              <p className="section-copy" style={{ marginBottom: '1.25rem' }}>
-                From deploying multi-server Linux environments to configuring enterprise firewalls
-                and Cisco switches, I have turned classroom theory into hands-on technical skills.
+                Ethical Hacking and Network Security undergraduate at NIBM with hands-on experience in Linux administration, Cisco networking, and firewall operations.
               </p>
               <p className="section-copy">
-                Actively seeking an internship in cybersecurity, networking, or system administration.
+                I build lab environments, validate results, and communicate technical work clearly. Actively seeking an internship in cybersecurity, networking, or system administration.
               </p>
             </Reveal>
           </div>

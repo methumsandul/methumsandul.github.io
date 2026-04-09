@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 
 const words = ['Ethical Hacking', 'Network Security', 'Linux Administration', 'DevOps']
+const recruiterSignals = ['Cybersecurity Intern', 'Linux + Networking Labs', '9+ Certifications']
 const portraitSrc = `${import.meta.env.BASE_URL}profile-photo.jpg`
 
 function Typewriter() {
@@ -97,7 +98,7 @@ export default function Hero() {
           >
             <span style={{ width: 8, height: 8, borderRadius: '50%', background: 'var(--white)', display: 'inline-block', animation: 'pulse 2s infinite' }} />
             <span className="mono" style={{ fontSize: '0.72rem', letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--grey-1)' }}>
-              Available for internships - Kalutara, Sri Lanka
+              Available for internships | Kalutara, Sri Lanka
             </span>
           </motion.div>
 
@@ -121,7 +122,7 @@ export default function Hero() {
             className="section-subtitle"
             style={{ maxWidth: 620, marginBottom: '2rem' }}
           >
-            I build secure networked environments, harden Linux systems, and learn fast through practical labs that mirror real operational work.
+            Ethical Hacking and Network Security undergraduate focused on secure networking, Linux operations, and hands-on lab delivery.
           </motion.p>
 
           <motion.div
@@ -144,6 +145,17 @@ export default function Hero() {
             <a href="#contact" className="btn-primary">Get in touch</a>
             <a href={`${import.meta.env.BASE_URL}cv.pdf`} download className="btn-ghost">Download CV</a>
             <a href="#projects" className="btn-ghost">View projects</a>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.55, delay: 0.42 }}
+            style={{ display: 'flex', flexWrap: 'wrap', gap: '0.55rem', marginTop: '1.3rem' }}
+          >
+            {recruiterSignals.map((item) => (
+              <span key={item} className="pill">{item}</span>
+            ))}
           </motion.div>
         </div>
 

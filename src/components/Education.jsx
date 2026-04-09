@@ -8,7 +8,7 @@ const items = [
     period: '2024 - 2028',
     degree: 'BSc (Hons) Ethical Hacking and Network Security',
     institution: 'NIBM',
-    detail: 'Undergraduate pathway focused on secure systems, cyber concepts, and practical network defence thinking.',
+    detail: 'Core undergraduate track in secure systems, cyber fundamentals, and defensive practice.',
     current: true,
     logo: `${base}images/education/nibm-logo.png`,
     fallback: 'NI',
@@ -17,7 +17,7 @@ const items = [
     period: '2025 - 2026',
     degree: 'Higher National Diploma in Network Engineering',
     institution: 'NIBM',
-    detail: 'Applied networking track covering routing, switching, service deployment, and infrastructure fundamentals.',
+    detail: 'Applied networking track covering routing, switching, and infrastructure service delivery.',
     current: true,
     logo: `${base}images/education/nibm-logo.png`,
     fallback: 'NI',
@@ -26,7 +26,7 @@ const items = [
     period: '2024 - 2025',
     degree: 'Diploma in Network Engineering',
     institution: 'NIBM',
-    detail: 'Built the base for hands-on networking practice and the labs that now support my project work.',
+    detail: 'Built foundational networking skills through practical labs and structured assignments.',
     current: false,
     logo: `${base}images/education/nibm-logo.png`,
     fallback: 'NI',
@@ -35,7 +35,7 @@ const items = [
     period: '2012 - 2023',
     degree: 'Secondary Education',
     institution: "St. Sebastian's College, Moratuwa",
-    detail: 'Academic foundation before moving into formal cybersecurity and network engineering studies.',
+    detail: 'Completed secondary education before specializing in cybersecurity and networking.',
     current: false,
     logo: `${base}images/education/st-sebastians-logo.png`,
     fallback: 'SS',
@@ -95,7 +95,7 @@ export default function Education() {
 
         <Reveal delay={0.05}>
           <p className="section-subtitle" style={{ maxWidth: 760, marginBottom: '3rem' }}>
-            My academic path combines formal cybersecurity study with network engineering programs that directly support the labs and projects in this portfolio.
+            Academic training aligned with hands-on cybersecurity and network operations work.
           </p>
         </Reveal>
 

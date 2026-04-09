@@ -8,12 +8,12 @@ const projects = [
     num: '01',
     category: 'Enterprise networking lab',
     title: 'Campus Network Segmentation and VLAN Rollout',
-    desc: 'Designed a Cisco-based network layout that separated departments with VLANs, mapped access and trunk ports correctly, and restored only the communication paths that were actually required.',
-    impact: 'This project demonstrates that I can take network requirements and turn them into a cleaner, more secure switching environment with controlled traffic flow and easier troubleshooting.',
+    desc: 'Built a segmented Cisco campus lab with VLAN isolation and controlled inter-department routing.',
+    impact: 'Shows I can turn network requirements into a secure, maintainable switching design.',
     highlights: [
-      'Planned department-based segmentation instead of leaving every device on a flat network.',
-      'Configured access ports, trunk links, and inter-VLAN routing to keep the design functional end to end.',
-      'Validated isolation and reachability so each segment behaved the way the design intended.',
+      'Mapped access and trunk ports with clear VLAN boundaries.',
+      'Configured inter-VLAN routing for only required traffic flows.',
+      'Validated isolation and reachability with structured endpoint tests.',
     ],
     tags: ['Cisco IOS', 'VLAN', 'Inter-VLAN routing', 'Switching'],
     gallery: [
@@ -31,12 +31,12 @@ const projects = [
     num: '02',
     category: 'Linux infrastructure lab',
     title: 'Multi-Service Linux Environment for Core Network Services',
-    desc: 'Built a Linux server environment that delivered DNS, DHCP, FTP over SSL/TLS, and Apache-based web hosting while keeping services testable and maintainable.',
-    impact: 'The value here is not only standing services up, but proving I can coordinate several infrastructure roles together, verify them properly, and apply security-minded configuration choices.',
+    desc: 'Deployed DNS, DHCP, secure FTP, and Apache hosting in one Linux lab environment.',
+    impact: 'Demonstrates end-to-end infrastructure setup with reliable validation and security-aware configuration.',
     highlights: [
-      'Deployed BIND, DHCP, Apache, and FTP services across a structured lab environment.',
-      'Configured reservations, virtual hosting, and controlled service access for more realistic administration.',
-      'Used validation checks and service testing to confirm the environment behaved reliably.',
+      'Configured BIND zones, DHCP scopes, and Apache virtual hosts.',
+      'Enabled secure FTP workflows with SSL/TLS controls.',
+      'Tested service behavior and availability across realistic scenarios.',
     ],
     tags: ['Linux', 'BIND', 'DHCP', 'Apache', 'SSL/TLS'],
   },
@@ -44,12 +44,12 @@ const projects = [
     num: '03',
     category: 'Security and operations lab',
     title: 'Firewall, Proxy, and Backup Operations Setup',
-    desc: 'Configured pfSense with Squid filtering, balanced traffic across services, and automated backup routines so the environment stayed safer and easier to recover.',
-    impact: 'This project shows operational value: reducing exposure through firewall and proxy controls while improving resilience with repeatable backup automation.',
+    desc: 'Implemented firewall policy, proxy filtering, traffic balancing, and automated backups in a security lab.',
+    impact: 'Highlights operational readiness through stronger control, resilience, and recovery planning.',
     highlights: [
-      'Set up firewall and proxy rules to control how traffic moved through the lab.',
-      'Used load balancing to spread service demand instead of relying on a single point of handling.',
-      'Automated backup routines with rsync and scheduled scripts to support recovery readiness.',
+      'Built pfSense and Squid rules to enforce traffic policy.',
+      'Applied load balancing to reduce single-point bottlenecks.',
+      'Automated backups with scheduled rsync and Bash scripts.',
     ],
     tags: ['pfSense', 'Squid Proxy', 'Load balancing', 'rsync', 'Bash'],
   },
@@ -57,13 +57,12 @@ const projects = [
     num: '04',
     category: 'AI productivity software',
     title: 'ANT - AI Note Taker for Live Lectures',
-    desc: 'Built a desktop lecture assistant that listens to online or physical lectures, shows a live transcript while the session is happening, and turns the captured content into structured study notes.',
-    impact: 'This project shows I can turn AI into a focused product experience by combining live capture, note generation, and lecture-aware chat in one workflow. Uploading lecture slides also helps the notes stay more relevant and accurate.',
+    desc: 'Built an AI desktop app that transcribes lectures and generates structured study notes in real time.',
+    impact: 'Shows product-focused execution by combining live capture, summarization, and context-aware AI chat.',
     highlights: [
-      'Captured lecture audio in real time and displayed a live transcript during each session.',
-      'Generated organized notes from the transcript so students could review the session faster.',
-      'Added an ANT AI chat area for summaries, key terms, exam-style questions, and lecture-specific Q&A.',
-      'Connected the AI workflow to Groq with an API key entered in settings and supported slide uploads for better context.',
+      'Captured and displayed live lecture transcription during sessions.',
+      'Converted transcripts into concise, study-ready note blocks.',
+      'Integrated Groq chat and slide uploads for better contextual answers.',
     ],
     tags: ['Groq AI', 'Desktop software', 'Live transcription', 'AI notes', 'Lecture Q&A', 'Slide upload'],
     gallery: [
@@ -178,7 +177,7 @@ export default function Projects() {
 
         <Reveal delay={0.05}>
           <p className="section-subtitle" style={{ maxWidth: 760, marginBottom: '3rem' }}>
-            Selected work that combines secure design, infrastructure reliability, and practical delivery across networking, Linux, and AI-assisted tooling.
+            Selected projects focused on secure execution, reliable delivery, and practical technical impact.
           </p>
         </Reveal>
 

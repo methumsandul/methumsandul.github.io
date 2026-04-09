@@ -3,22 +3,22 @@ import Reveal from './Reveal'
 const categories = [
   {
     title: 'Networking',
-    strengths: ['VLAN planning and inter-VLAN routing', 'TCP/IP fundamentals with DNS, DHCP, HTTP, and FTP', 'Packet analysis and connectivity validation'],
+    strengths: ['VLAN segmentation and inter-VLAN routing', 'DNS, DHCP, HTTP, and FTP service fundamentals', 'Connectivity testing and packet-level troubleshooting'],
     tools: ['Cisco IOS', 'VLAN', 'Routing', 'DNS', 'DHCP'],
   },
   {
     title: 'Security',
-    strengths: ['Firewall and proxy configuration', 'SSL/TLS awareness and secure service delivery', 'Threat investigation mindset and access control basics'],
+    strengths: ['Firewall and proxy policy configuration', 'Secure service hardening with SSL/TLS basics', 'Access control and incident triage mindset'],
     tools: ['pfSense', 'Network Security', 'Proxying', 'SSL/TLS', 'Incident Response'],
   },
   {
     title: 'Linux and Services',
-    strengths: ['Linux administration for multi-service environments', 'BIND, Apache, and FTP service deployment', 'System troubleshooting and configuration review'],
+    strengths: ['Linux administration for multi-service environments', 'BIND, Apache, and VSFTPD deployment', 'Log review, troubleshooting, and service recovery'],
     tools: ['Linux', 'BIND', 'Apache', 'VSFTPD', 'Bash'],
   },
   {
     title: 'Operations',
-    strengths: ['Backup flows and file synchronization', 'Virtualized lab setup for repeatable testing', 'Version control and structured workflow habits'],
+    strengths: ['Backup automation using rsync and Bash scripts', 'Virtualized lab setup for repeatable testing', 'Git-based workflow and change tracking'],
     tools: ['rsync', 'Ansible', 'Virtualization', 'GitHub', 'Load Balancing'],
   },
 ]
@@ -31,6 +31,12 @@ export default function Skills() {
           <div className="h-rule">
             <span className="label">02 - Skills</span>
           </div>
+        </Reveal>
+
+        <Reveal delay={0.05}>
+          <p className="section-subtitle" style={{ maxWidth: 760, marginBottom: '3rem' }}>
+            Job-ready capabilities across secure networking, Linux operations, and practical infrastructure support.
+          </p>
         </Reveal>
 
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '1.5rem' }}>
@@ -46,7 +52,7 @@ export default function Skills() {
 
                 <div style={{ display: 'grid', gap: '0.8rem' }}>
                   <div className="mono" style={{ fontSize: '0.72rem', letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--grey-2)' }}>
-                    What I can handle
+                    Core capabilities
                   </div>
                   <ul style={{ margin: 0, padding: 0, listStyle: 'none', display: 'grid', gap: '0.75rem' }}>
                     {strengths.map((item) => (
