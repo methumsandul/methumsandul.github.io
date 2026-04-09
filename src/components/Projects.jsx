@@ -178,7 +178,7 @@ export default function Projects() {
 
         <Reveal delay={0.05}>
           <p className="section-subtitle" style={{ maxWidth: 760, marginBottom: '3rem' }}>
-           
+            Selected work that combines secure design, infrastructure reliability, and practical delivery across networking, Linux, and AI-assisted tooling.
           </p>
         </Reveal>
 

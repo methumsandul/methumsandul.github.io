@@ -95,7 +95,7 @@ export default function Education() {
 
         <Reveal delay={0.05}>
           <p className="section-subtitle" style={{ maxWidth: 760, marginBottom: '3rem' }}>
-             
+            My academic path combines formal cybersecurity study with network engineering programs that directly support the labs and projects in this portfolio.
           </p>
         </Reveal>
 

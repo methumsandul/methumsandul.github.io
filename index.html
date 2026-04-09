@@ -4,19 +4,51 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="%BASE_URL%favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Methum Sandul | Cybersecurity Portfolio</title>
     <meta
       name="description"
       content="Methum Sandul - Ethical Hacking and Network Security undergraduate. Cybersecurity portfolio showcasing projects, certifications, and skills."
     />
+    <meta name="robots" content="index,follow" />
     <meta name="theme-color" content="#080808" />
-    <title>Methum Sandul | Cybersecurity Portfolio</title>
+    <link id="canonical-url" rel="canonical" href="/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Methum Sandul Portfolio" />
+    <meta property="og:title" content="Methum Sandul | Cybersecurity Portfolio" />
+    <meta
+      property="og:description"
+      content="Explore cybersecurity, networking, Linux, and AI-focused project work by Methum Sandul."
+    />
+    <meta id="og-url" property="og:url" content="/" />
+    <meta property="og:image" content="%BASE_URL%images/projects/ant-screenshot.png" />
+    <meta property="og:image:alt" content="ANT AI Note Taker project screenshot from the portfolio" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Methum Sandul | Cybersecurity Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Explore cybersecurity, networking, Linux, and AI-focused project work by Methum Sandul."
+    />
+    <meta name="twitter:image" content="%BASE_URL%images/projects/ant-screenshot.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,300&family=DM+Mono:wght@300;400;500&display=swap"
       rel="stylesheet"
-    >
+    />
   </head>
   <body>
     <div id="root"></div>
+    <script>
+      const canonical = document.getElementById('canonical-url')
+      const ogUrl = document.getElementById('og-url')
+      const currentUrl = window.location.href
+
+      if (canonical) canonical.setAttribute('href', currentUrl)
+      if (ogUrl) ogUrl.setAttribute('content', currentUrl)
+    </script>
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

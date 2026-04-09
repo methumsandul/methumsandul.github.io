@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const links = [
@@ -14,6 +14,8 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [active, setActive] = useState('')
   const [open, setOpen] = useState(false)
+  const toggleRef = useRef(null)
+  const firstLinkRef = useRef(null)
 
   useEffect(() => {
     const fn = () => {
@@ -35,6 +37,47 @@ export default function Navbar() {
     window.addEventListener('scroll', fn)
     return () => window.removeEventListener('scroll', fn)
   }, [])
+
+  useEffect(() => {
+    if (!open) return undefined
+
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+
+    const onKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        setOpen(false)
+        toggleRef.current?.focus()
+        return
+      }
+
+      if (event.key !== 'Tab') return
+
+      const focusable = Array.from(document.querySelectorAll('#mobile-nav-overlay button'))
+      if (!focusable.length) return
+
+      const first = focusable[0]
+      const last = focusable[focusable.length - 1]
+
+      if (!(first instanceof HTMLElement) || !(last instanceof HTMLElement)) return
+
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault()
+        last.focus()
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault()
+        first.focus()
+      }
+    }
+
+    window.addEventListener('keydown', onKeyDown)
+    requestAnimationFrame(() => firstLinkRef.current?.focus())
+
+    return () => {
+      document.body.style.overflow = previousOverflow
+      window.removeEventListener('keydown', onKeyDown)
+    }
+  }, [open])
 
   const go = (href) => {
     setOpen(false)
@@ -100,7 +143,14 @@ export default function Navbar() {
           Open to work
         </div>
 
-        <button className="md:hidden flex flex-col gap-[5px]" onClick={() => setOpen(!open)} aria-label="Open navigation">
+        <button
+          ref={toggleRef}
+          className="md:hidden flex flex-col gap-[5px]"
+          onClick={() => setOpen((prev) => !prev)}
+          aria-label={open ? 'Close navigation' : 'Open navigation'}
+          aria-expanded={open}
+          aria-controls="mobile-nav-overlay"
+        >
           <span style={{ display: 'block', width: 20, height: 1, background: 'var(--grey-1)', transition: 'all 0.3s', transform: open ? 'translateY(6px) rotate(45deg)' : 'none' }} />
           <span style={{ display: 'block', width: 20, height: 1, background: 'var(--grey-1)', transition: 'all 0.3s', opacity: open ? 0 : 1 }} />
           <span style={{ display: 'block', width: 20, height: 1, background: 'var(--grey-1)', transition: 'all 0.3s', transform: open ? 'translateY(-6px) rotate(-45deg)' : 'none' }} />
@@ -110,9 +160,13 @@ export default function Navbar() {
       <AnimatePresence>
         {open && (
           <motion.div
+            id="mobile-nav-overlay"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            role="dialog"
+            aria-modal="true"
+            aria-label="Mobile navigation"
             style={{
               position: 'fixed',
               inset: 0,
@@ -125,9 +179,34 @@ export default function Navbar() {
               gap: '2.5rem',
             }}
           >
+            <button
+              onClick={() => {
+                setOpen(false)
+                toggleRef.current?.focus()
+              }}
+              className="mono"
+              style={{
+                position: 'absolute',
+                top: '2rem',
+                right: '8%',
+                fontSize: '0.75rem',
+                letterSpacing: '0.16em',
+                textTransform: 'uppercase',
+                color: 'var(--grey-1)',
+                border: '1px solid var(--grey-3)',
+                borderRadius: '999px',
+                padding: '0.6rem 1rem',
+                background: 'rgba(255, 255, 255, 0.03)',
+              }}
+              aria-label="Close navigation menu"
+            >
+              Close
+            </button>
+
             {links.map(({ href, label }, i) => (
               <motion.button
                 key={href}
+                ref={i === 0 ? firstLinkRef : undefined}
                 initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: i * 0.05 }}
